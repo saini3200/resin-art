@@ -3525,3 +3525,209 @@ body.public-site .floating-whatsapp-icon {
     padding-top: .85rem;
   }
 }
+
+
+/* =========================================================
+   Resin Creations — Full-Bleed Hero Overlay
+   Reference direction: editorial hero with live copy directly
+   over the background image; no floating content card.
+   ========================================================= */
+
+body.public-site .hero {
+  min-height: min(760px, calc(100vh - 76px));
+  display: flex;
+  align-items: center;
+  background: #1b1916;
+}
+
+body.public-site .hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(15, 14, 12, .74) 0%,
+      rgba(15, 14, 12, .58) 38%,
+      rgba(15, 14, 12, .24) 74%,
+      rgba(15, 14, 12, .12) 100%
+    ),
+    linear-gradient(180deg,
+      rgba(15, 14, 12, .08) 0%,
+      rgba(15, 14, 12, .28) 100%
+    );
+}
+
+body.public-site .hero-card {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: none;
+  margin: 0 auto;
+  padding: 5rem 0 4.5rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.public-site .hero-content {
+  max-width: 760px;
+  color: #fff;
+  text-align: left;
+}
+
+body.public-site .hero .eyebrow {
+  margin-bottom: 1.15rem;
+  color: #d4b47b;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+body.public-site .hero h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.5rem, 6vw, 5.8rem);
+  line-height: .96;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+body.public-site .hero-copy {
+  max-width: 670px;
+  margin: 1.6rem 0 2rem;
+  color: rgba(255,255,255,.88);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+body.public-site .hero-actions {
+  display: block;
+}
+
+body.public-site .hero-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+body.public-site .hero-action-row .button {
+  min-height: 54px;
+}
+
+body.public-site .hero .button-primary {
+  background: #b89455;
+  color: #171512;
+}
+
+body.public-site .hero .button-primary:hover,
+body.public-site .hero .button-primary:focus-visible {
+  background: #d4b47b;
+  color: #171512;
+}
+
+body.public-site .hero .button-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.42);
+  color: #fff;
+}
+
+body.public-site .hero .button-secondary:hover,
+body.public-site .hero .button-secondary:focus-visible {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.72);
+}
+
+body.public-site .hero-trust-badges {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: start;
+  gap: 1.7rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+
+body.public-site .hero-trust-badge {
+  padding: 0;
+  border: 0;
+  color: rgba(255,255,255,.8);
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+body.public-site .hero-trust-badge::before {
+  content: '•';
+  margin-right: .45rem;
+  color: #d4b47b;
+}
+
+@media (max-width: 900px) {
+  body.public-site .hero {
+    min-height: 720px;
+    align-items: flex-end;
+  }
+
+  body.public-site .hero-card {
+    width: min(100% - 1.5rem, 680px);
+    margin: 0 auto;
+    padding: 4rem 0 4.5rem;
+  }
+
+  body.public-site .hero-content {
+    max-width: 640px;
+  }
+
+  body.public-site .hero h1 {
+    font-size: clamp(2.85rem, 10vw, 4.1rem);
+    line-height: .98;
+  }
+
+  body.public-site .hero-copy {
+    margin: 1.25rem 0 1.6rem;
+    font-size: .95rem;
+  }
+
+  body.public-site .hero-trust-badges {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    padding-top: .85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body.public-site .hero {
+    min-height: 720px;
+  }
+
+  body.public-site .hero-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(15,14,12,.14) 0%,
+        rgba(15,14,12,.34) 38%,
+        rgba(15,14,12,.82) 100%
+      );
+  }
+
+  body.public-site .hero-card {
+    width: calc(100% - 1rem);
+    padding: 3rem 0 4.25rem;
+  }
+
+  body.public-site .hero h1 {
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
+  }
+
+  body.public-site .hero-copy {
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+
+  body.public-site .hero-action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.public-site .hero-action-row .button {
+    width: 100%;
+  }
+
+  body.public-site .hero-trust-badges {
+    margin-top: 1rem;
+  }
+}
