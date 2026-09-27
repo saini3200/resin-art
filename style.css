@@ -2872,10 +2872,6 @@ body.public-site .back-to-top {
     grid-template-columns: 1fr;
   }
 
-  body.public-site .process-grid::before {
-    display: none;
-  }
-
   .floating-whatsapp {
     right: 14px;
     bottom: 14px;
