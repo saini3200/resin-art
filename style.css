@@ -3397,3 +3397,131 @@ body.public-site .back-to-top {
     transform: none !important;
   }
 }
+
+
+/* =========================================================
+   Resin Creations — Hero Polish Pass
+   Final composition refinement based on desktop screenshots.
+   Keeps existing hero slider and interaction behavior intact.
+   ========================================================= */
+
+body.public-site .hero-card {
+  box-sizing: border-box;
+  width: min(820px, calc(100% - 2.5rem));
+  max-width: 820px;
+  padding: clamp(2.75rem, 4.5vw, 3.75rem);
+}
+
+body.public-site .hero h1 {
+  max-width: 680px;
+  font-size: clamp(3rem, 4.5vw, 4.55rem);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+
+body.public-site .hero-copy {
+  max-width: 650px;
+}
+
+body.public-site .hero-actions {
+  display: block;
+}
+
+body.public-site .hero-action-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: .75rem;
+}
+
+body.public-site .hero-action-row .button {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 56px;
+}
+
+body.public-site .hero-trust-badges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  width: 100%;
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(143,108,53,.16);
+}
+
+body.public-site .hero-trust-badge {
+  justify-content: flex-start;
+  padding: 0;
+  border-top: 0;
+  white-space: nowrap;
+}
+
+body.public-site .hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(18,16,14,.68) 0%, rgba(18,16,14,.32) 54%, rgba(18,16,14,.34) 100%),
+    linear-gradient(180deg, rgba(18,16,14,.08), rgba(18,16,14,.34));
+}
+
+body.public-site .floating-whatsapp > span:first-child,
+body.public-site .floating-whatsapp-icon {
+  background: #d4b47b !important;
+  color: #1d1b18 !important;
+}
+
+@media (max-width: 900px) {
+  body.public-site .hero-card {
+    width: calc(100% - 1.5rem);
+    max-width: 620px;
+    padding: 2rem 1.35rem;
+  }
+
+  body.public-site .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 9vw, 3.65rem);
+    line-height: 1;
+  }
+
+  body.public-site .hero-action-row {
+    flex-wrap: wrap;
+  }
+
+  body.public-site .hero-action-row .button {
+    flex: 1 1 220px;
+  }
+
+  body.public-site .hero-trust-badges {
+    grid-template-columns: 1fr;
+  }
+
+  body.public-site .hero-trust-badge {
+    justify-content: flex-start;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  body.public-site .hero-card {
+    width: calc(100% - 1rem);
+    padding: 1.5rem 1rem;
+  }
+
+  body.public-site .hero h1 {
+    font-size: clamp(2.05rem, 9.7vw, 2.9rem);
+  }
+
+  body.public-site .hero-action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.public-site .hero-action-row .button {
+    width: 100%;
+    flex: none;
+  }
+
+  body.public-site .hero-trust-badges {
+    margin-top: 1rem;
+    padding-top: .85rem;
+  }
+}
