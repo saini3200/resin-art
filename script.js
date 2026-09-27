@@ -345,6 +345,39 @@ function updateCustomizationFieldUI() {
   }
 }
 
+function initSiteIntro() {
+  const intro = document.getElementById('siteIntro');
+  if (!intro) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let alreadySeen = false;
+
+  try {
+    alreadySeen = sessionStorage.getItem('resinIntroSeen') === '1';
+  } catch (error) {
+    alreadySeen = false;
+  }
+
+  if (reduceMotion || alreadySeen) {
+    intro.classList.add('intro-hidden');
+    document.body.classList.remove('intro-active');
+    return;
+  }
+
+  document.body.classList.add('intro-active');
+
+  try {
+    sessionStorage.setItem('resinIntroSeen', '1');
+  } catch (error) {
+    // Continue without persistence when storage is unavailable.
+  }
+
+  window.setTimeout(() => {
+    intro.classList.add('intro-hidden');
+    document.body.classList.remove('intro-active');
+  }, 1450);
+}
+
 function initMobileNavigation() {
   const toggle = document.getElementById('mobileMenuToggle');
   const nav = document.getElementById('primary-navigation');
@@ -375,6 +408,7 @@ function initMobileNavigation() {
 }
 
 function initPage() {
+  initSiteIntro();
   initSlider();
   initMobileNavigation();
   setupScrollAnimations();
