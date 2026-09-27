@@ -210,12 +210,7 @@
           <button class="button button-card" onclick="buyProduct('Resin Pooja Thali', 1499); event.stopPropagation();">Order on WhatsApp</button>
         </article>
       </div>
-
-      <div class="container section-head more-products-heading">
-        <h2 id="more-products-title">More Products</h2>
-      </div>
-      <div class="container product-grid more-products" id="more-products-grid"></div>
-    </section>
+</section>
 
     <!-- SEO: Blog section supports content marketing and keyword-rich internal linking -->
     <section class="section blog-section" id="blog" aria-labelledby="blog-title">
@@ -403,19 +398,32 @@
                   <option value="Large">Large</option>
                 </select>
               </label>
-              <label>
-                Color Selection
-                <input type="color" id="productColor" value="#D9B35F">
+              <label class="color-field">
+                <span>Color Selection</span>
+                <span class="color-picker-ui">
+                  <input type="color" id="productColor" value="#D9B35F" aria-describedby="color-value">
+                  <span class="color-picker-meta">
+                    <strong id="color-value">Golden</strong>
+                    <small>Choose your preferred shade</small>
+                  </span>
+                </span>
               </label>
               <label>
                 Custom Text
                 <input type="text" id="custom-text" placeholder="Name, date or message">
               </label>
-              <label>
-                Upload Image
-                <input type="file" id="photoUpload" accept="image/*,.jfif,.heic,.heif" onchange="handlePhotoUpload(event)">
+              <div class="file-upload-field">
+                <label for="photoUpload">Upload Image</label>
+                <div class="file-upload-control">
+                  <div class="file-upload-copy">
+                    <strong>Upload your image</strong>
+                    <span id="photoUploadName">JPG / PNG · Optional</span>
+                  </div>
+                  <button type="button" class="file-upload-button" id="choosePhotoButton" aria-describedby="photoUploadName">Choose Image</button>
+                </div>
+                <input type="file" id="photoUpload" class="file-input-visually-hidden" accept="image/*,.jfif,.heic,.heif" onchange="handlePhotoUpload(event)">
                 <span class="file-note">Upload an optional image for your custom design. Attach the same photo manually in WhatsApp after sending.</span>
-              </label>
+              </div>
               <label>
                 Delivery Address
                 <textarea id="delivery-address" placeholder="Street, city, postal code"></textarea>
@@ -490,10 +498,11 @@
         <h3>Quick Links</h3>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#values">About</a>
-          <a href="#order">Order</a>
+          <a href="#products">Collection</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#process">Process</a>
+          <a href="#values">Why Us</a>
+          <a href="#order">Create</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -524,7 +533,7 @@
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/+918397903160?text=Hi%20Resin%20Creations%2C%20I%20want%20to%20discuss%20a%20custom%20resin%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat with Resin Creations on WhatsApp"><span aria-hidden="true">⌁</span><span class="floating-whatsapp-label">WhatsApp</span></a>
+  <a class="floating-whatsapp" href="https://wa.me/+918397903160?text=Hi%20Resin%20Creations%2C%20I%20want%20to%20discuss%20a%20custom%20resin%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat with Resin Creations on WhatsApp"><span class="floating-whatsapp-icon" aria-hidden="true">WA</span><span class="floating-whatsapp-label">WhatsApp</span></a>
 
   <a class="floating-whatsapp" href="https://wa.me/+918397903160?text=Hi%20Resin%20Creations%2C%20I%20want%20to%20discuss%20a%20custom%20resin%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat with Resin Creations on WhatsApp"><span aria-hidden="true">⌁</span><span class="floating-whatsapp-label">WhatsApp</span></a>
 
