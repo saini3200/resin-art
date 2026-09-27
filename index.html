@@ -69,16 +69,20 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand">Resin Creations</a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#home" class="brand" aria-label="Resin Creations home">Resin Creations</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
         <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#products">Products</a>
-        <a class="nav-link" href="#gallery">Portfolio</a>
-        <a class="nav-link" href="#order">Order</a>
+        <a class="nav-link" href="#products">Collection</a>
+        <a class="nav-link" href="#gallery">Our Work</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#order">Create</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="button button-order-now" onclick="orderNow()">Order Now</button>
+        <button class="button button-order-now" type="button" onclick="orderNow()">Create Yours</button>
       </div>
     </div>
   </header>
@@ -104,13 +108,15 @@
       <div class="slider-dots"></div>
       <div class="hero-card">
         <div class="hero-content">
-          <p class="eyebrow" id="hero-eyebrow">✨ Handcrafted & Personalized</p>
-         <h1 id="hero-title">Custom Resin Art India – Handmade Epoxy Designs</h1>
-          <p class="hero-copy" id="hero-description">We create high-quality resin art in India including epoxy resin art, custom resin designs, and handmade resin products. Our resin art tables in India are perfect for modern home decor and personalized gifts.</p>
+          <p class="eyebrow" id="hero-eyebrow">Handcrafted • Personalized • Made to Keep</p>
+          <h1 id="hero-title">Turn Your Memories Into Something Beautiful.</h1>
+          <p class="hero-copy" id="hero-description">Custom resin art, wedding keepsakes, personalized gifts, and handcrafted decor designed around your story and finished with a premium touch.</p>
           <div class="hero-actions">
-            <button class="button button-primary button-hero" onclick="orderNow()">Start Order</button>
-            <a class="button button-secondary" href="#order">Place an Order</a>
-            <div class="hero-trust-badges" aria-label="Hero trust badges">
+            <div class="hero-action-row">
+              <button class="button button-primary button-hero" type="button" onclick="orderNow()">Create Your Piece</button>
+              <a class="button button-secondary" href="#products">Explore Collection</a>
+            </div>
+            <div class="hero-trust-badges" aria-label="Studio highlights">
               <span class="hero-trust-badge">5★ customer reviews</span>
               <span class="hero-trust-badge">Fast delivery</span>
               <span class="hero-trust-badge">WhatsApp ordering</span>
@@ -514,6 +520,8 @@
       </div>
     </div>
   </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/+918397903160?text=Hi%20Resin%20Creations%2C%20I%20want%20to%20discuss%20a%20custom%20resin%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat with Resin Creations on WhatsApp"><span aria-hidden="true">⌁</span><span class="floating-whatsapp-label">WhatsApp</span></a>
 
   <a class="floating-whatsapp" href="https://wa.me/+918397903160?text=Hi%20Resin%20Creations%2C%20I%20want%20to%20discuss%20a%20custom%20resin%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat with Resin Creations on WhatsApp"><span aria-hidden="true">⌁</span><span class="floating-whatsapp-label">WhatsApp</span></a>
 
