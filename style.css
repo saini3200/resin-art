@@ -2494,15 +2494,6 @@ body.public-site .process-grid {
   gap: 1rem;
 }
 
-body.public-site .process-grid::before {
-  content: '';
-  position: absolute;
-  left: 16%;
-  right: 16%;
-  top: 30px;
-  height: 1px;
-  background: rgba(212,180,123,.35);
-}
 
 body.public-site .process-card {
   z-index: 1;
