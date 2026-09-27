@@ -3771,3 +3771,113 @@ body.public-site .hero-slider img {
   filter: none !important;
   -webkit-filter: none !important;
 }
+
+
+/* =========================================================
+   Resin Creations — Mobile Hero Composition
+   Keep desktop full-bleed layout; make mobile typography,
+   spacing, image crop, and controls intentionally balanced.
+   ========================================================= */
+
+@media (max-width: 600px) {
+  body.public-site .hero {
+    min-height: 740px;
+    align-items: flex-end;
+  }
+
+  body.public-site .hero-slider img {
+    object-position: center center;
+  }
+
+  body.public-site .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10, 10, 9, .06) 0%,
+        rgba(10, 10, 9, .16) 30%,
+        rgba(10, 10, 9, .58) 66%,
+        rgba(10, 10, 9, .88) 100%
+      );
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  body.public-site .hero-card {
+    width: calc(100% - 2rem);
+    padding: 3.75rem 0 6rem;
+  }
+
+  body.public-site .hero-content {
+    max-width: 100%;
+  }
+
+  body.public-site .hero .eyebrow {
+    margin-bottom: .85rem;
+    font-size: .63rem;
+    letter-spacing: .16em;
+    line-height: 1.45;
+  }
+
+  body.public-site .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 11.2vw, 3.25rem);
+    line-height: .96;
+    letter-spacing: -.035em;
+  }
+
+  body.public-site .hero-copy {
+    max-width: 34rem;
+    margin: 1rem 0 1.3rem;
+    color: rgba(255,255,255,.9);
+    font-size: .86rem;
+    line-height: 1.55;
+  }
+
+  body.public-site .hero-action-row {
+    gap: .55rem;
+  }
+
+  body.public-site .hero-action-row .button {
+    min-height: 50px;
+    padding: .8rem 1rem;
+    font-size: .83rem;
+  }
+
+  body.public-site .hero-trust-badges {
+    gap: .35rem;
+    margin-top: .85rem;
+    padding-top: .75rem;
+  }
+
+  body.public-site .hero-trust-badge {
+    font-size: .65rem;
+    line-height: 1.35;
+  }
+
+  body.public-site .slider-nav {
+    top: auto;
+    bottom: 20px;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    background: rgba(18,16,14,.28);
+  }
+
+  body.public-site .slider-prev {
+    left: 12px;
+  }
+
+  body.public-site .slider-next {
+    right: 12px;
+  }
+
+  body.public-site .slider-dots {
+    bottom: 34px;
+    gap: 7px;
+  }
+
+  body.public-site .slider-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
