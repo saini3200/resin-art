@@ -2977,9 +2977,6 @@ body.public-site {
   min-width: 0;
 }
 
-body.public-site {
-  overflow-x: clip;
-}
 
 body.public-site img,
 body.public-site svg,
@@ -3064,6 +3061,22 @@ body.public-site .more-products-heading {
 body.public-site .order-form label,
 body.public-site .file-upload-field {
   min-width: 0;
+}
+
+body.public-site .form-preview-link {
+  margin-top: -.2rem;
+  font-size: .72rem;
+}
+
+body.public-site .form-preview-link a {
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+body.public-site .form-preview-link a:hover,
+body.public-site .form-preview-link a:focus-visible {
+  text-decoration: underline;
 }
 
 body.public-site .color-field > span:first-child,
