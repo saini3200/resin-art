@@ -3979,3 +3979,135 @@ body.public-site .hero-slider img {
     bottom: 36px;
   }
 }
+
+
+/* =========================================================
+   Resin Creations — Brand Intro
+   Short premium reveal shown once per browser tab session.
+   ========================================================= */
+
+body.public-site.intro-active {
+  overflow: hidden;
+}
+
+body.public-site .site-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: #1d1b18;
+  color: #f8f5ef;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  animation: siteIntroExit .55s ease 1.05s forwards;
+}
+
+body.public-site .site-intro-content {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+body.public-site .site-intro-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.02em;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: siteIntroBrand .7s cubic-bezier(.22,1,.36,1) .12s forwards;
+}
+
+body.public-site .site-intro-line {
+  width: 0;
+  height: 1px;
+  margin: 1.2rem 0 .9rem;
+  background: #d4b47b;
+  animation: siteIntroLine .65s ease .48s forwards;
+}
+
+body.public-site .site-intro-tagline {
+  color: #d4b47b;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(.62rem, 1.2vw, .78rem);
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: siteIntroTagline .6s ease .64s forwards;
+}
+
+body.public-site .site-intro.intro-hidden {
+  opacity: 0 !important;
+  visibility: hidden;
+  pointer-events: none;
+  animation: none;
+}
+
+@keyframes siteIntroBrand {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes siteIntroLine {
+  to {
+    width: min(180px, 46vw);
+  }
+}
+
+@keyframes siteIntroTagline {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes siteIntroExit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 600px) {
+  body.public-site .site-intro-brand {
+    font-size: 2rem;
+  }
+
+  body.public-site .site-intro-tagline {
+    max-width: 280px;
+    font-size: .56rem;
+    letter-spacing: .16em;
+    line-height: 1.6;
+  }
+
+  body.public-site .site-intro-line {
+    margin-top: 1rem;
+    margin-bottom: .8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.public-site .site-intro {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  body.public-site .site-intro-brand,
+  body.public-site .site-intro-line,
+  body.public-site .site-intro-tagline {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
