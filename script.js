@@ -1,19 +1,19 @@
 const whatsappNumber = '+918397903160';
 const whatsappBase = `https://wa.me/${whatsappNumber}`;
 const productPreviewImages = {
-  'Resin Frame': 'images/image2.png',
-  'Resin Key Chain': 'images/image1.png',
-  'Resin Varmala Preservation': 'images/image3.png',
-  'Resin Bookmark': 'images/image5.png',
-  'Resin Photo Keychain': 'images/image4.png',
-  'Resin Tissue Holder': 'images/image5.png',
-  'Alphabet Key Chain': 'images/image1.png',
-  'Wedding Card Preservation': 'images/image4.png',
-  'Customised Ring Plate': 'images/image3.png',
-  'Resin Pooja Thali': 'images/image6.png',
-  'Resin Name Board': 'images/image5.png',
-  'Car Hanging': 'images/image6.png',
-  'Dashboard': 'images/image4.png'
+  'Resin Frame': 'image2.png',
+  'Resin Key Chain': 'image1.png',
+  'Resin Varmala Preservation': 'image3.png',
+  'Resin Bookmark': 'image5.png',
+  'Resin Photo Keychain': 'image4.png',
+  'Resin Tissue Holder': 'image5.png',
+  'Alphabet Key Chain': 'image1.png',
+  'Wedding Card Preservation': 'image4.png',
+  'Customised Ring Plate': 'image3.png',
+  'Resin Pooja Thali': 'image6.png',
+  'Resin Name Board': 'image5.png',
+  'Car Hanging': 'image6.png',
+  'Dashboard': 'image4.png'
 };
 
 const header = document.querySelector('.site-header');
@@ -21,7 +21,7 @@ const backToTopButton = document.getElementById('backToTop');
 const observerOptions = { threshold: 0.18 };
 
 function getProductPreviewImage(product) {
-  return productPreviewImages[product] || 'images/image4.png';
+  return productPreviewImages[product] || 'image4.png';
 }
 
 // Slider variables
@@ -329,8 +329,38 @@ function setupScrollAnimations() {
   animatedElements.forEach(element => observer.observe(element));
 }
 
+function initMobileNavigation() {
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('primary-navigation');
+  if (!toggle || !nav) return;
+
+  const closeMenu = () => {
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+
+  nav.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
+
+  document.addEventListener('click', event => {
+    if (!document.body.classList.contains('menu-open')) return;
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+}
+
 function initPage() {
   initSlider();
+  initMobileNavigation();
   setupScrollAnimations();
 
   document.querySelectorAll('.product-card, .gallery-grid img').forEach(element => {
