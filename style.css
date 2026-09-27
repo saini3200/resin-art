@@ -3731,3 +3731,30 @@ body.public-site .hero-trust-badge::before {
     margin-top: 1rem;
   }
 }
+
+
+/* Hero image clarity: keep the background photographic and sharp. */
+body.public-site .hero-slider img {
+  filter: none;
+  -webkit-filter: none;
+}
+
+body.public-site .hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(15, 14, 12, .58) 0%,
+      rgba(15, 14, 12, .32) 42%,
+      rgba(15, 14, 12, .10) 100%
+    ),
+    linear-gradient(180deg,
+      rgba(15, 14, 12, .04) 0%,
+      rgba(15, 14, 12, .18) 100%
+    );
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.public-site .slider-nav {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
