@@ -3241,6 +3241,13 @@ body.public-site .floating-whatsapp-icon {
   letter-spacing: .02em;
 }
 
+body.public-site .floating-whatsapp-icon svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: currentColor;
+}
+
 body.public-site .floating-whatsapp > span:first-child {
   width: 24px;
   height: 24px;
