@@ -329,6 +329,22 @@ function setupScrollAnimations() {
   animatedElements.forEach(element => observer.observe(element));
 }
 
+function updateCustomizationFieldUI() {
+  const colorInput = document.getElementById('productColor');
+  const colorValue = document.getElementById('color-value');
+  if (colorInput && colorValue) {
+    colorValue.textContent = getColorNameFromHex(colorInput.value);
+  }
+
+  const photoInput = document.getElementById('photoUpload');
+  const photoName = document.getElementById('photoUploadName');
+  if (photoInput && photoName) {
+    photoName.textContent = photoInput.files.length > 0
+      ? photoInput.files[0].name
+      : 'JPG / PNG · Optional';
+  }
+}
+
 function initMobileNavigation() {
   const toggle = document.getElementById('mobileMenuToggle');
   const nav = document.getElementById('primary-navigation');
@@ -391,9 +407,23 @@ function initPage() {
 
   const photoInput = document.getElementById('photoUpload');
   if (photoInput) {
-    photoInput.addEventListener('change', updateOrderSummary);
+    photoInput.addEventListener('change', () => {
+      updateCustomizationFieldUI();
+      updateOrderSummary();
+    });
   }
 
+  const choosePhotoButton = document.getElementById('choosePhotoButton');
+  if (choosePhotoButton && photoInput) {
+    choosePhotoButton.addEventListener('click', () => photoInput.click());
+  }
+
+  if (colorInput) {
+    colorInput.addEventListener('input', updateCustomizationFieldUI);
+    colorInput.addEventListener('change', updateCustomizationFieldUI);
+  }
+
+  updateCustomizationFieldUI();
   updateOrderSummary();
 }
 
@@ -423,9 +453,13 @@ function handlePhotoUpload(event) {
   const file = event.target.files[0];
   const isImageFile = file && (file.type.startsWith('image/') || /\.(png|jpe?g|jfif|jpe|heic|heif|gif|webp|bmp|svg)$/i.test(file.name));
   if (!isImageFile) {
-    alert('Please select a valid image file (jpg, png, gif, webp, bmp).');
+    alert('Please select a valid image file (jpg, png, gif, webp, bmp, svg).');
+    event.target.value = '';
+    updateCustomizationFieldUI();
     return;
   }
+
+  updateCustomizationFieldUI();
 
   const reader = new FileReader();
   reader.onload = function(e) {
