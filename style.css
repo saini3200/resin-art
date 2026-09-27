@@ -3881,3 +3881,107 @@ body.public-site .hero-slider img {
     height: 6px;
   }
 }
+
+
+/* =========================================================
+   Resin Creations — Hero Readability & Spacing Polish
+   Final targeted pass after desktop/mobile visual review.
+   ========================================================= */
+
+/* Desktop: slightly reduce headline dominance and expose more of the artwork. */
+@media (min-width: 901px) {
+  body.public-site .hero-card {
+    padding-top: 4.35rem;
+    padding-bottom: 4rem;
+  }
+
+  body.public-site .hero-content {
+    max-width: 730px;
+  }
+
+  body.public-site .hero h1 {
+    max-width: 730px;
+    font-size: clamp(3.35rem, 5.5vw, 5.25rem);
+  }
+
+  body.public-site .hero-copy {
+    max-width: 640px;
+    margin-top: 1.4rem;
+  }
+}
+
+/* Mobile: keep the image bright/sharp, but add a localized readability zone
+   behind the copy instead of darkening the full photograph. */
+@media (max-width: 600px) {
+  body.public-site .hero {
+    min-height: 760px;
+  }
+
+  body.public-site .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10, 10, 9, .02) 0%,
+        rgba(10, 10, 9, .04) 30%,
+        rgba(10, 10, 9, .28) 50%,
+        rgba(10, 10, 9, .72) 72%,
+        rgba(10, 10, 9, .92) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(10, 10, 9, .38) 0%,
+        rgba(10, 10, 9, .16) 48%,
+        rgba(10, 10, 9, 0) 100%
+      );
+  }
+
+  body.public-site .hero-card {
+    padding-top: 2.75rem;
+    padding-bottom: 5.75rem;
+  }
+
+  body.public-site .hero .eyebrow {
+    margin-bottom: .95rem;
+  }
+
+  body.public-site .hero h1 {
+    font-size: clamp(2.4rem, 10.6vw, 3.2rem);
+    line-height: .98;
+    max-width: 19ch;
+  }
+
+  body.public-site .hero-copy {
+    max-width: 31rem;
+    margin-top: 1.15rem;
+    margin-bottom: 1.45rem;
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  body.public-site .hero-action-row {
+    gap: .65rem;
+  }
+
+  body.public-site .hero-action-row .button {
+    min-height: 52px;
+  }
+
+  body.public-site .hero-trust-badges {
+    margin-top: 1rem;
+    padding-top: .9rem;
+    gap: .42rem;
+  }
+
+  body.public-site .hero-trust-badge {
+    font-size: .67rem;
+    line-height: 1.4;
+  }
+
+  body.public-site .slider-nav {
+    bottom: 22px;
+  }
+
+  body.public-site .slider-dots {
+    bottom: 36px;
+  }
+}
