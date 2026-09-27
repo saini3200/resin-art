@@ -375,7 +375,7 @@ function initSiteIntro() {
   window.setTimeout(() => {
     intro.classList.add('intro-hidden');
     document.body.classList.remove('intro-active');
-  }, 1450);
+  }, 3000);
 }
 
 function initMobileNavigation() {
