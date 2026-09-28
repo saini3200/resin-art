@@ -674,3 +674,20 @@ button {
     transition: none !important;
   }
 }
+
+/* Theme switcher — dark mode */
+.theme-switcher {
+  background: rgba(21, 21, 21, 0.92) !important;
+  border-color: rgba(201, 169, 110, 0.22) !important;
+}
+.theme-option {
+  color: #aaa49a !important;
+}
+.theme-option:hover,
+.theme-option:focus-visible {
+  color: #f4f0e8 !important;
+}
+.theme-option[aria-pressed="true"] {
+  background: #c9a96e !important;
+  color: #12110f !important;
+}
