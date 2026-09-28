@@ -507,6 +507,7 @@ function initThemeSwitcher() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  initThemeSwitcher();
   initPage();
   setTimeout(() => {
     document.body.classList.add('page-ready');
