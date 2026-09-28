@@ -10,19 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="theme-modern-ecommerce.css" id="theme-light-styles">
-  <link rel="stylesheet" href="theme-dark-luxury.css" id="theme-dark-styles" disabled>
-  <script>
-    try {
-      const savedTheme = localStorage.getItem('resinTheme');
-      if (savedTheme === 'dark') {
-        document.getElementById('theme-light-styles').disabled = true;
-        document.getElementById('theme-dark-styles').disabled = false;
-      }
-    } catch (error) {
-      // Use the default light theme when storage is unavailable.
-    }
-  </script>
+  <link rel="stylesheet" href="theme-modern-ecommerce.css">
+  <link rel="stylesheet" href="theme-dark-luxury.css" media="(prefers-color-scheme: dark)">
   <script defer src="script.js"></script>
   <!-- SEO: Keywords help reinforce page relevance for resin art searches -->
   <meta name="keywords" content="resin art India, epoxy resin art, custom resin art India, handmade resin products India, resin art table India"> 
@@ -99,29 +88,8 @@
         <a class="nav-link" href="#gallery">Our Work</a>
         <a class="nav-link" href="#process">Process</a>
         <a class="nav-link" href="#order">Create</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <div class="mobile-theme-switcher" aria-label="Choose website theme">
-          <button class="theme-option" type="button" data-theme-option="light" aria-pressed="true" title="Light mode · Modern Ecommerce">
-            <span class="theme-option-icon" aria-hidden="true">☼</span>
-            <span>Light</span>
-          </button>
-          <button class="theme-option" type="button" data-theme-option="dark" aria-pressed="false" title="Dark mode · Dark Luxury">
-            <span class="theme-option-icon" aria-hidden="true">◐</span>
-            <span>Dark</span>
-          </button>
-        </div>
-      </nav>
+        <a class="nav-link" href="#contact">Contact</a></nav>
       <div class="header-actions">
-        <div class="theme-switcher" aria-label="Choose website theme">
-          <button class="theme-option" type="button" data-theme-option="light" aria-pressed="true" title="Light mode · Modern Ecommerce">
-            <span class="theme-option-icon" aria-hidden="true">☼</span>
-            <span>Light</span>
-          </button>
-          <button class="theme-option" type="button" data-theme-option="dark" aria-pressed="false" title="Dark mode · Dark Luxury">
-            <span class="theme-option-icon" aria-hidden="true">◐</span>
-            <span>Dark</span>
-          </button>
-        </div>
         <button class="button button-order-now" type="button" onclick="orderNow()">Create Yours</button>
       </div>
     </div>
