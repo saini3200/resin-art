@@ -4095,3 +4095,111 @@ body.public-site .site-intro.intro-hidden {
     transform: none;
   }
 }
+
+/* =========================================================
+   Premium ecommerce system — shared structure
+   ========================================================= */
+
+/* Featured products: one consistent image frame for every product. */
+body.public-site .featured-products .product-card img,
+body.public-site .product-grid .product-card img {
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  background: #ecebe7 !important;
+}
+
+/* Keep product badges consistently placed. */
+body.public-site .product-badges {
+  top: 12px !important;
+  left: 12px !important;
+  right: auto !important;
+  z-index: 3 !important;
+}
+
+/* Tighter process grouping: number → heading → description. */
+body.public-site .process-card .process-step {
+  margin-bottom: .7rem !important;
+}
+
+body.public-site .process-card h3 {
+  margin-top: 0 !important;
+  margin-bottom: .55rem !important;
+}
+
+body.public-site .process-card p {
+  line-height: 1.65 !important;
+}
+
+/* Hero CTAs stay side-by-side on larger screens. */
+body.public-site .hero-action-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .75rem;
+}
+
+body.public-site .hero-action-row .button {
+  width: auto;
+  min-width: 0;
+}
+
+/* Floating actions share one fixed stack so they never collide. */
+body.public-site .floating-actions {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 70;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+
+body.public-site .floating-actions > * {
+  position: static !important;
+  right: auto !important;
+  bottom: auto !important;
+  pointer-events: auto;
+}
+
+body.public-site .floating-actions .floating-whatsapp {
+  min-height: 52px;
+}
+
+body.public-site .floating-actions .back-to-top {
+  margin: 0;
+}
+
+body.public-site .site-footer {
+  padding-bottom: 7rem;
+}
+
+@media (max-width: 900px) {
+  body.public-site .hero-action-row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  body.public-site .hero-action-row .button {
+    width: 100%;
+  }
+
+  body.public-site .floating-actions {
+    right: 24px;
+    bottom: 24px;
+    gap: 10px;
+  }
+
+  body.public-site .site-footer {
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body.public-site .floating-actions {
+    right: 20px;
+    bottom: 20px;
+  }
+}
