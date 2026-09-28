@@ -662,3 +662,50 @@ body.public-site {
   }
 }
 \n
+
+/* =========================================================
+   Visual correction pass — Light / Modern Ecommerce
+   ========================================================= */
+
+/* Keep the contrast-led process section intentional and readable. */
+body.public-site .process-section {
+  background: #1d1b18 !important;
+  color: #f7f2e9 !important;
+}
+body.public-site .process-section h2,
+body.public-site .process-section .section-intro,
+body.public-site .process-section .process-card h3,
+body.public-site .process-section .process-card p {
+  color: #f7f2e9 !important;
+}
+body.public-site .process-section .section-label {
+  color: #c9a96e !important;
+}
+body.public-site .process-section .process-step {
+  background: rgba(201,169,110,.08) !important;
+  border: 1px solid rgba(201,169,110,.42) !important;
+  color: #c9a96e !important;
+}
+
+/* Give the hero image more presence instead of washing it out. */
+body.public-site .hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(248,248,245,.86) 0%,
+      rgba(248,248,245,.62) 27%,
+      rgba(248,248,245,.16) 60%,
+      rgba(248,248,245,0) 100%) !important;
+}
+
+body.public-site .value-icon {
+  filter: none !important;
+  background: #efefeb !important;
+  color: #252525 !important;
+}
+
+body.public-site input[type="date"],
+body.public-site input[type="time"],
+body.public-site input[type="color"],
+body.public-site select {
+  color-scheme: light;
+}
