@@ -786,3 +786,43 @@ body.public-site .value-icon {
   color: #e8e0d4 !important;
   border: 1px solid rgba(201,169,110,.18) !important;
 }
+
+/* =========================================================
+   Button radius parity — Dark Luxury
+   Match the Light / UI Refinement theme without changing
+   any existing dark-theme button colors.
+   ========================================================= */
+
+body.public-site .header-actions .button-order-now {
+  border-radius: 10px !important;
+}
+
+body.public-site .button {
+  border-radius: 10px !important;
+}
+
+body.public-site .button-card {
+  border-radius: 9px !important;
+}
+
+body.public-site .button-order-whatsapp {
+  border-radius: 9px !important;
+}
+
+body.public-site .button-whatsapp-cta {
+  border-radius: 9px !important;
+}
+
+body.public-site .file-upload-button {
+  border-radius: 8px !important;
+}
+
+body.public-site .mobile-menu-toggle {
+  border-radius: 10px !important;
+}
+
+/* Keep circular controls circular, matching the light theme. */
+body.public-site .slider-nav,
+body.public-site .back-to-top {
+  border-radius: 50% !important;
+}
