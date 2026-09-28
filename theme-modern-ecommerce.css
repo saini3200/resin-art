@@ -687,14 +687,16 @@ body.public-site .process-section .process-step {
   color: #c9a96e !important;
 }
 
-/* Give the hero image more presence instead of washing it out. */
-body.public-site .hero-overlay {
-  background:
-    linear-gradient(90deg,
-      rgba(248,248,245,.86) 0%,
-      rgba(248,248,245,.62) 27%,
-      rgba(248,248,245,.16) 60%,
-      rgba(248,248,245,0) 100%) !important;
+/* Give the desktop hero image more presence instead of washing it out. */
+@media (min-width: 901px) {
+  body.public-site .hero-overlay {
+    background:
+      linear-gradient(90deg,
+        rgba(248,248,245,.86) 0%,
+        rgba(248,248,245,.62) 27%,
+        rgba(248,248,245,.16) 60%,
+        rgba(248,248,245,0) 100%) !important;
+  }
 }
 
 body.public-site .value-icon {
