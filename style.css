@@ -4185,3 +4185,24 @@ body.public-site .site-intro.intro-hidden {
     transition: none;
   }
 }
+
+/* Theme switcher — mobile navigation */
+.mobile-theme-switcher {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-theme-switcher {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin: .65rem 0 .2rem;
+    padding-top: .65rem;
+    border-top: 1px solid rgba(23, 23, 23, 0.12);
+  }
+
+  .mobile-theme-switcher .theme-option {
+    min-height: 42px;
+    width: 100%;
+  }
+}
