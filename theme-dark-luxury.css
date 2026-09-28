@@ -674,3 +674,73 @@ button {
     transition: none !important;
   }
 }
+
+/* =========================================================
+   Visual correction pass — Dark Luxury
+   ========================================================= */
+
+/* Repair high-specificity light/base rules inside the dark process section. */
+body.public-site .process-section {
+  background: #0d0d0d !important;
+  color: #f4f0e8 !important;
+}
+body.public-site .process-section h2,
+body.public-site .process-section .section-intro,
+body.public-site .process-section .process-card h3,
+body.public-site .process-section .process-card p {
+  color: #f4f0e8 !important;
+}
+body.public-site .process-section .section-label {
+  color: #c9a96e !important;
+}
+body.public-site .process-section .process-step {
+  background: rgba(201,169,110,.07) !important;
+  border: 1px solid rgba(201,169,110,.34) !important;
+  color: #c9a96e !important;
+}
+
+/* The live-preview detail rows should stay dark in Dark Luxury. */
+body.public-site .preview-card {
+  background: #0f0f0f !important;
+  color: #f4f0e8 !important;
+  border-color: rgba(201,169,110,.20) !important;
+}
+body.public-site .preview-details {
+  background: #141414 !important;
+}
+body.public-site .preview-detail {
+  background: #181818 !important;
+  color: #e8e0d4 !important;
+  border-bottom: 1px solid rgba(255,255,255,.07) !important;
+}
+body.public-site .preview-detail strong {
+  color: #b9b0a3 !important;
+}
+body.public-site .preview-detail span {
+  color: #a89f94 !important;
+}
+body.public-site .preview-color-row #preview-color-name {
+  color: #d7b979 !important;
+}
+
+/* Keep native controls visually aligned with the dark palette. */
+body.public-site input[type="date"],
+body.public-site input[type="time"],
+body.public-site input[type="color"],
+body.public-site select,
+body.public-site textarea,
+body.public-site input {
+  color-scheme: dark;
+}
+body.public-site option {
+  background: #151515 !important;
+  color: #f4f0e8 !important;
+}
+
+/* Make the value icons legible instead of disappearing into the cards. */
+body.public-site .value-icon {
+  filter: none !important;
+  background: #1d1d1d !important;
+  color: #e8e0d4 !important;
+  border: 1px solid rgba(201,169,110,.18) !important;
+}
