@@ -2404,10 +2404,14 @@ body.public-site .blog-grid {
 }
 
 body.public-site .blog-card {
-  min-height: 245px;
-  padding: 1.6rem;
+  min-height: 0;
+  height: auto;
+  display: grid;
+  align-content: start;
+  gap: .85rem;
+  padding: 1.5rem;
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 20px;
   box-shadow: none;
   background: rgba(255,255,255,.72);
 }
@@ -2419,12 +2423,15 @@ body.public-site .blog-card:focus-within {
 }
 
 body.public-site .blog-card h3 {
-  font-size: 1.55rem;
-  line-height: 1.2;
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.22;
 }
 
 body.public-site .blog-card p {
+  margin: 0;
   font-size: .92rem;
+  line-height: 1.7;
 }
 
 .blog-kicker {
@@ -2438,6 +2445,7 @@ body.public-site .blog-card p {
 }
 
 body.public-site .blog-card a {
+  margin-top: .1rem;
   color: var(--text-primary);
   font-size: .88rem;
   font-weight: 800;
