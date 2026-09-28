@@ -21,22 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.skip-link {
-  position: absolute;
-  top: -48px;
-  left: 1rem;
-  background: rgba(255,255,255,0.96);
-  color: var(--text-primary);
-  padding: 0.75rem 1rem;
-  border-radius: 999px;
-  z-index: 100;
-  transition: top 0.2s ease;
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
