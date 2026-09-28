@@ -893,3 +893,27 @@ body.public-site .hero-trust-badge::before {
     font-size: .7rem;
   }
 }
+
+/* Blog cards — compact editorial spacing */
+body.public-site .blog-card {
+  min-height: 0 !important;
+  height: auto !important;
+  display: grid !important;
+  align-content: start !important;
+  gap: .85rem !important;
+  padding: 1.5rem !important;
+  border-radius: 20px !important;
+}
+body.public-site .blog-card h3 {
+  margin: 0 !important;
+  font-size: 1.45rem !important;
+  line-height: 1.22 !important;
+}
+body.public-site .blog-card p {
+  margin: 0 !important;
+  line-height: 1.7 !important;
+}
+body.public-site .blog-card a {
+  margin-top: .1rem !important;
+  font-weight: 800 !important;
+}
