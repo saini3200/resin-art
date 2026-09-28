@@ -498,7 +498,7 @@ button {
 .final-cta-panel {
   background: #151515 !important;
   border: 1px solid rgba(201, 169, 110, 0.22) !important;
-  border-radius: 8px !important;
+  border-radius: 32px !important;
   box-shadow: 0 28px 72px rgba(0, 0, 0, 0.38) !important;
 }
 
@@ -514,6 +514,7 @@ button {
 .button-whatsapp-cta {
   background: #c9a96e !important;
   color: #12110f !important;
+  border-radius: 999px !important;
 }
 
 .site-footer {
