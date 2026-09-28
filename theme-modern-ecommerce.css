@@ -662,3 +662,20 @@ body.public-site {
   }
 }
 \n
+
+/* Theme switcher — light mode */
+.theme-switcher {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e0e0da !important;
+}
+.theme-option {
+  color: #70706a !important;
+}
+.theme-option:hover,
+.theme-option:focus-visible {
+  color: #111 !important;
+}
+.theme-option[aria-pressed="true"] {
+  background: #111 !important;
+  color: #fff !important;
+}
