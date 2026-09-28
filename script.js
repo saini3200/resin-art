@@ -462,53 +462,8 @@ function initPage() {
 }
 
 
-function applySiteTheme(theme) {
-  const normalizedTheme = theme === 'dark' ? 'dark' : 'light';
-  const lightStyles = document.getElementById('theme-light-styles');
-  const darkStyles = document.getElementById('theme-dark-styles');
-  const themeButtons = document.querySelectorAll('[data-theme-option]');
-
-  if (!lightStyles || !darkStyles) return;
-
-  lightStyles.disabled = normalizedTheme === 'dark';
-  darkStyles.disabled = normalizedTheme === 'light';
-
-  document.documentElement.dataset.theme = normalizedTheme;
-
-  themeButtons.forEach((button) => {
-    const isActive = button.dataset.themeOption === normalizedTheme;
-    button.setAttribute('aria-pressed', String(isActive));
-  });
-
-  try {
-    localStorage.setItem('resinTheme', normalizedTheme);
-  } catch (error) {
-    // Theme still works for the current page when storage is unavailable.
-  }
-}
-
-function initThemeSwitcher() {
-  const themeButtons = document.querySelectorAll('[data-theme-option]');
-  const initialTheme = (() => {
-    try {
-      return localStorage.getItem('resinTheme') === 'dark' ? 'dark' : 'light';
-    } catch (error) {
-      return 'light';
-    }
-  })();
-
-  applySiteTheme(initialTheme);
-
-  themeButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      applySiteTheme(button.dataset.themeOption);
-    });
-  });
-}
-
 window.addEventListener('DOMContentLoaded', () => {
-  initThemeSwitcher();
-  initPage();
+initPage();
   setTimeout(() => {
     document.body.classList.add('page-ready');
   }, 100);
