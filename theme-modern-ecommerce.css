@@ -679,3 +679,31 @@ body.public-site {
   background: #111 !important;
   color: #fff !important;
 }
+
+/* Header sizing parity + mobile theme switcher — light */
+.button-order-now {
+  min-width: 142px !important;
+  padding: .95rem 1.6rem !important;
+  font-size: .82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 900px) {
+  .mobile-theme-switcher {
+    border-top-color: #e5e5df !important;
+  }
+
+  .mobile-theme-switcher .theme-option {
+    background: #f7f7f5 !important;
+    color: #70706a !important;
+    border: 1px solid #e0e0da !important;
+  }
+
+  .mobile-theme-switcher .theme-option[aria-pressed="true"] {
+    background: #111 !important;
+    color: #fff !important;
+    border-color: #111 !important;
+  }
+}
