@@ -4233,3 +4233,111 @@ body.public-site .hero-trust-badge::before {
     font-size: .68rem;
   }
 }
+
+/* =========================================================
+   Premium boutique light theme
+   ========================================================= */
+
+/* Editorial hero: image first, white copy, controlled dark gradient. */
+body.public-site .hero {
+  background: #1d1b18 !important;
+}
+
+body.public-site .hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.56) 0%,
+      rgba(0,0,0,.34) 42%,
+      rgba(0,0,0,.12) 76%,
+      rgba(0,0,0,.08) 100%),
+    linear-gradient(180deg,
+      rgba(0,0,0,.08) 0%,
+      rgba(0,0,0,.22) 58%,
+      rgba(0,0,0,.48) 100%) !important;
+}
+
+body.public-site .hero-card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+body.public-site .hero h1 {
+  color: #fffaf3 !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  text-shadow: 0 2px 22px rgba(0,0,0,.18);
+}
+
+body.public-site .hero-copy {
+  color: rgba(255,250,243,.84) !important;
+}
+
+body.public-site .hero .eyebrow {
+  color: #d8bb87 !important;
+}
+
+body.public-site .hero .button-primary {
+  background: #c5a880 !important;
+  color: #181512 !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+}
+
+body.public-site .hero .button-primary:hover,
+body.public-site .hero .button-primary:focus-visible {
+  background: #d2b98f !important;
+}
+
+body.public-site .hero .button-secondary {
+  background: rgba(255,255,255,.04) !important;
+  color: #fffaf3 !important;
+  border: 1px solid rgba(255,255,255,.58) !important;
+}
+
+body.public-site .hero .button-secondary:hover,
+body.public-site .hero .button-secondary:focus-visible {
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.82) !important;
+}
+
+body.public-site .hero-trust-badges {
+  border-top-color: rgba(255,255,255,.20) !important;
+}
+
+/* Uniform gallery-like product framing. */
+body.public-site .product-card {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+body.public-site .product-card img {
+  background: #efeeea !important;
+}
+
+body.public-site .process-section {
+  background: #1c1b1a !important;
+  color: #fffaf3 !important;
+}
+body.public-site .process-section h2,
+body.public-site .process-section .section-intro,
+body.public-site .process-section .process-card h3,
+body.public-site .process-section .process-card p {
+  color: #fffaf3 !important;
+}
+body.public-site .process-section .section-label {
+  color: #c5a880 !important;
+}
+body.public-site .process-section .process-step {
+  color: #c5a880 !important;
+  border-color: rgba(197,168,128,.45) !important;
+  background: rgba(197,168,128,.08) !important;
+}
+
+/* Clean FAB spacing while preserving existing light colors. */
+body.public-site .floating-whatsapp {
+  margin: 0 !important;
+}
+body.public-site .back-to-top {
+  margin: 0 !important;
+}
