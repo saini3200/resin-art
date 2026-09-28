@@ -1077,3 +1077,16 @@ body.public-site .floating-whatsapp {
 body.public-site .back-to-top {
   margin: 0 !important;
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  body.public-site .site-nav {
+    background: rgba(16,16,16,.98) !important;
+    border-bottom-color: rgba(201,169,110,.20) !important;
+    box-shadow: 0 24px 50px rgba(0,0,0,.48) !important;
+  }
+
+  body.public-site .site-nav .nav-link {
+    color: #ddd5ca !important;
+    border-bottom-color: rgba(201,169,110,.12) !important;
+  }
+}
