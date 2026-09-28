@@ -10,6 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme-modern-ecommerce.css" id="theme-light-styles">
+  <link rel="stylesheet" href="theme-dark-luxury.css" id="theme-dark-styles" disabled>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('resinTheme');
+      if (savedTheme === 'dark') {
+        document.getElementById('theme-light-styles').disabled = true;
+        document.getElementById('theme-dark-styles').disabled = false;
+      }
+    } catch (error) {
+      // Use the default light theme when storage is unavailable.
+    }
+  </script>
   <script defer src="script.js"></script>
   <!-- SEO: Keywords help reinforce page relevance for resin art searches -->
   <meta name="keywords" content="resin art India, epoxy resin art, custom resin art India, handmade resin products India, resin art table India"> 
